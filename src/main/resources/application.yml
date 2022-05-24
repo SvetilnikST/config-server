@@ -11,10 +11,9 @@ server:
   port: 8888
 
 eureka:
-  instance:
-    prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      defaultZone: ${eureka_url:http://eureka-server:8761/eureka}
+
     register-with-eureka: true
     fetch-registry: true
